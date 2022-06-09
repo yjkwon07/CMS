@@ -1,14 +1,14 @@
 import { useMemo } from 'react';
 
-import { useRouter } from 'next/router';
-
 import { getActiveMenuList } from '../utils';
 import useCheckMenuList from './useCheckMenuList';
 import useListReadMenu from './useListReadMenu';
 
-const useActiveMenuList = () => {
-  const location = useRouter();
-
+/**
+ * pathname에 변화에 따라 메뉴 위치를 찾고 해당 MenuType을 리턴
+ * @param location Location
+ */
+const useActiveMenuList = (location: Location) => {
   const menuList = useListReadMenu();
 
   const checkMenuList = useCheckMenuList({ fullMenuList: menuList });
