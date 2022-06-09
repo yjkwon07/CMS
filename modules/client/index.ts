@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import { cloneDeep } from 'lodash';
 
 import { getAccessToken, removeAccessToken } from '@/modules/auth/utils/token';
 import { DEFAULT_API_ERROR_MESSAGE } from '@/setting';
@@ -45,27 +46,24 @@ axios.interceptors.request.use(
 // Add a response interceptor
 axios.interceptors.response.use(
   (response) => {
+    const { resCode, resMsg } = response.data;
     // 여기서 백에서 주는 code 값에 따라 reject 판단 아마 성공 이외는 모두 reject로 리턴하면 될듯
     // msg는 api 정책 문서(json, js)를 만들고 그 값을 리턴 기본 에러 메시지는 "시스템 오류"
-    const { resCode, resMsg } = response.data;
-    if (!resMsg) {
-      response.data.resMsg = DEFAULT_API_ERROR_MESSAGE;
-    }
     if (resCode !== 'SUCCESS') {
       if (resCode === 'ERROR_0002') removeAccessToken();
+      if (!resMsg) response.data.resMsg = DEFAULT_API_ERROR_MESSAGE;
+
       const error = { response };
       return Promise.reject(error);
     }
     return response;
   },
   (error) => {
+    const errorClone = cloneDeep(error);
     // 여기서 오는것은 모두 500대 에러 서버가 죽거나, origin 이슈같은것들이 올 예정
-    console.error(`error`, error);
-
-    if (!error?.response?.data) {
-      // eslint-disable-next-line no-param-reassign
-      error.response = { data: { resMsg: DEFAULT_API_ERROR_MESSAGE } };
+    if (!errorClone?.response?.data) {
+      errorClone.response = { data: { resMsg: DEFAULT_API_ERROR_MESSAGE } };
     }
-    return Promise.reject(error);
+    return Promise.reject(errorClone);
   },
 );
