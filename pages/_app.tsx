@@ -1,15 +1,32 @@
 import { FC } from 'react';
+import type { ReactElement, ReactNode } from 'react';
 
+import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { SWRConfig } from 'swr';
+
+import '@/styles/default.css';
+import '@/styles/font.css';
+import GlobalStyles from '@/styles/GlobalStyles';
+
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
 
 const AuthCheck: FC = ({ children }) => {
   // 권한 검사는 여기서
   return <>{children}</>;
 };
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppPropsWithLayout) => {
+  // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout ?? ((page: any) => page);
+
   return (
     <>
       <Head>
@@ -23,15 +40,14 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <title>CMS</title>
       </Head>
+      <GlobalStyles />
       <SWRConfig
         value={{
           revalidateOnFocus: false,
           shouldRetryOnError: false,
         }}
       >
-        <AuthCheck>
-          <Component {...pageProps} />
-        </AuthCheck>
+        <AuthCheck>{getLayout(<Component {...pageProps} />)}</AuthCheck>
       </SWRConfig>
     </>
   );

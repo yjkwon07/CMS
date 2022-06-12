@@ -1,0 +1,223 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  font-family: 'NotoKrR', '맑은 고딕', Dotum, '돋움', AppleSDGothicNeo, arial, sans-serif;
+  vertical-align: middle;
+  letter-spacing: -0.5px;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+i {
+  font-style: normal;
+  color: #666666;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a,
+a:focus,
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+textarea,
+select {
+  box-sizing: border-box;
+  vertical-align: middle;
+  color: #666666;
+  font-size: 14px;
+  font-family: 'NotoKrR', '맑은 고딕', Dotum, '돋움', AppleSDGothicNeo, arial, sans-serif;
+}
+
+input {
+  vertical-align: middle;
+  margin: 0;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  vertical-align: middle;
+  color: #666666;
+  font-size: 14px;
+  font-family: 'NotoKrR', '맑은 고딕', Dotum, '돋움', AppleSDGothicNeo, arial, sans-serif;
+}
+
+label {
+  vertical-align: middle;
+  color: #666666;
+}
+
+img {
+  border: 0 none;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+textarea {
+  width: 100%;
+  appearance: none;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'NotoKrR', '맑은 고딕', Dotum, '돋움', AppleSDGothicNeo, arial, sans-serif;
+  appearance: none;
+  vertical-align: middle;
+}
+
+legend {
+  position: absolute;
+  top: -500000em;
+  left: -500000em;
+  text-shadow: none;
+  z-index: -1;
+  background: transparent;
+}
+
+caption {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0
+}
+
+mark {
+  background: transparent;
+  display: block;
+}
+
+sup {
+  font-size: 9px;
+}
+
+strong {
+  font-weight: normal;
+  font-family: "NotoKrM", '맑은 고딕', Dotum, '돋움', AppleSDGothicNeo, arial, sans-serif;
+}
