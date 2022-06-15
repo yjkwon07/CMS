@@ -18,9 +18,8 @@
     "baseUrl": ".",
     "paths": { // 절대경로 설정
       "@/*": ["*"],
-      "@assets/*": ["public/assets/*"],
       "@styles/*": ["styles/*"],
-      "@images/*": ["public/assets/images/*"]
+      "@images/*": ["public/images/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -2,34 +2,34 @@
   font-family: 'NotoKrL';
   font-style: normal;
   font-weight: 100;
-  src: local('Noto Sans Light'), local('NotoSans-Light'), url(/font/notokr-demilight.eot);
-  src: url(/font/notokr-demilight.eot) format('embedded-opentype'),
-    url(/font/notokr-demilight.woff2) format('woff2'), url(/font/notokr-demilight.woff) format('woff');
+  src: local('Noto Sans Light'), local('NotoSans-Light'), url(/fonts/notokr-demilight.eot);
+  src: url(/fonts/notokr-demilight.eot) format('embedded-opentype'),
+    url(/fonts/notokr-demilight.woff2) format('woff2'), url(/fonts/notokr-demilight.woff) format('woff');
 }
 
 @font-face {
   font-family: 'NotoKrR';
   font-style: normal;
   font-weight: 300;
-  src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(/font/notokr-regular.eot);
-  src: url(/font/notokr-regular.eot) format('embedded-opentype'),
-    url(/font/notokr-regular.woff2) format('woff2'), url(/font/notokr-regular.woff) format('woff');
+  src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(/fonts/notokr-regular.eot);
+  src: url(/fonts/notokr-regular.eot) format('embedded-opentype'),
+    url(/fonts/notokr-regular.woff2) format('woff2'), url(/fonts/notokr-regular.woff) format('woff');
 }
 
 @font-face {
   font-family: 'NotoKrM';
   font-style: normal;
   font-weight: 500;
-  src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(/font/notokr-medium.eot);
-  src: url(/font/notokr-medium.eot) format('embedded-opentype'),
-    url(/font/notokr-medium.woff2) format('woff2'), url(/font/notokr-medium.woff) format('woff');
+  src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(/fonts/notokr-medium.eot);
+  src: url(/fonts/notokr-medium.eot) format('embedded-opentype'),
+    url(/fonts/notokr-medium.woff2) format('woff2'), url(/fonts/notokr-medium.woff) format('woff');
 }
 
 @font-face {
   font-family: 'NotoKrB';
   font-style: normal;
   font-weight: 700;
-  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(/font/notokr-bold.eot);
-  src: url(/font/notokr-bold.eot) format('embedded-opentype'),
-    url(/font/notokr-bold.woff2) format('woff2'), url(/font/notokr-bold.woff) format('woff');
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(/fonts/notokr-bold.eot);
+  src: url(/fonts/notokr-bold.eot) format('embedded-opentype'),
+    url(/fonts/notokr-bold.woff2) format('woff2'), url(/fonts/notokr-bold.woff) format('woff');
 }
