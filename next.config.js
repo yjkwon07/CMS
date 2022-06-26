@@ -2,6 +2,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    emotion: true,
+  },
 };
 const withTM = require('next-transpile-modules')(['route-type-safe']); // pass the modules you would like to see transpiled
 
